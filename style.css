@@ -1,0 +1,34 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.row {
+	flex: 1;
+	margin: 1%;
+	display: flex;
+	justify-content: center;
+}
+
+.col {
+	flex: 1;
+	margin: 0 15px;
+	border: 10px solid blue;
+	cursor: pointer;
+}
+
+.box-dark {
+	background: black;
+}
+
+.box-light {
+	background: white;
+}
