@@ -50,23 +50,4 @@ class Board {
 		}
 		this.swap(y, x);
 	}
-
-	zero() {
-		for (let r = 0;r < this.height;r ++) {
-			for (let c = 0;c < this.width;c ++) {
-				this.board[r][c] = 0;
-			}
-		}
-	}
-
-	cascade() {
-		// A helpful tool for solving:
-		for (let r = 0;r < this.height - 1;r ++) {
-			for (let c = 0;c < this.width;c ++) {
-				if (this.board[r][c] === 1) {
-					this.toggle(r + 1, c);
-				}
-			}
-		}
-	}
 }
