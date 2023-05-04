@@ -8,7 +8,7 @@ function updateBoard() {
 			let currentBox = children[c];
 	
 			currentBox.onclick = () => {
-				b.toggle(r,c);
+				b.toggle(c,r);
 				updateBoard();
 			};
 
@@ -31,3 +31,15 @@ function updateBoard() {
 const b = new Board(5, 5);
 
 updateBoard();
+
+document.addEventListener("keypress", (e) => {
+	if (e.key === "r" || e.key === "R") {
+		b.refreshBoard();
+		updateBoard();
+	}
+
+	if (e.key === "s" || e.key === "S") {
+		b.solveNextMove();
+		updateBoard();
+	}
+});
