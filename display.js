@@ -1,3 +1,5 @@
+const helpText = document.getElementById("helpText");
+
 function updateBoard() {
 	let rows = document.getElementsByClassName("row");
 
@@ -52,5 +54,19 @@ document.addEventListener("keypress", (e) => {
 				clearInterval(s);
 			}
 		}, 250);
+	}
+	
+	if (e.key === "h" || e.key === "H") {
+		if (helpText.style.display == 'none' || helpText.style.display == '') {
+			helpText.style.display = 'block';
+			for (let element of document.getElementsByClassName("row")) {
+				element.style.display = 'none';
+			}
+		} else {
+			helpText.style.display = 'none';
+			for (let element of document.getElementsByClassName("row")) {
+				element.style.display = "flex";
+			}
+		}
 	}
 });
