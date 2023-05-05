@@ -33,7 +33,6 @@ class Board {
 	}
 
 	toggle(x, y) {
-		console.debug(`Toggling: x=${x} y=${y}`);
 		let left  = (x > 0) ? x - 1 : null;
 		let right = (x < 4) ? x + 1 : null;
 		let above = (y > 0) ? y - 1 : null;
@@ -76,7 +75,7 @@ class Board {
 		}
 
 		if (!anyLit) {
-			return; // Board is solved!
+			return -1; // Board is solved!
 		}
 
 		this.secondTry = true;
@@ -92,9 +91,6 @@ class Board {
 		};
 
 		let thisSolution = solutions[this.board[this.height - 1]];
-
-		console.log(thisSolution);
-
 
 		for (let r = 0;r < this.width;r ++) {
 			if (thisSolution[r] === 1 && this.firstRowClicked[r] === 0) {

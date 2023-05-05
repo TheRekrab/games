@@ -32,6 +32,10 @@ const b = new Board(5, 5);
 
 updateBoard();
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 document.addEventListener("keypress", (e) => {
 	if (e.key === "r" || e.key === "R") {
 		b.refreshBoard();
@@ -39,7 +43,14 @@ document.addEventListener("keypress", (e) => {
 	}
 
 	if (e.key === "s" || e.key === "S") {
-		b.solveNextMove();
-		updateBoard();
+		let s = setInterval(() => {
+			console.info("Solving...");
+			let res = b.solveNextMove();
+			updateBoard();
+			if (res === -1) {
+				console.info("Board Solved!");
+				clearInterval(s);
+			}
+		}, 250);
 	}
 });
