@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	background: black;
+	background: #101010;
 }
 
 .container {
@@ -35,14 +35,24 @@ body {
 	flex: 1;
 	margin: 0 15px;
 	cursor: pointer;
+	border-radius: 6px;
 	transition: background 0.25s, box-shadow 0.125s;
 }
 
 .box-dark {
 	background: inherit;
+	box-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+.box-dark:hover {
+	box-shadow 0 0 10px black;
 }
 
 .box-light {
-	background: white;
-	box-shadow: 0px 0px 10px rgba(255,255,255,0.7);
+	background: #f1f1f1;
+	box-shadow: 0 0 10px rgba(255,255,255,0.7);
+}
+
+.box-light:hover {
+	box-shadow: 0 0 10px white;
 }
