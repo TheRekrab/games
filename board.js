@@ -75,6 +75,9 @@ class Board {
 		}
 
 		if (!anyLit) {
+			for (let i = 0;i < this.width;i ++) {
+				this.firstRowClicked[i] = 0;
+			}
 			return -1; // Board is solved!
 		}
 
