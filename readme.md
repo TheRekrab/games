@@ -2,7 +2,7 @@
 
 Another website about the classic strategy game, Lights Off.
 
-THe point of the game is to turn off all the lit tiles in a 5x5 grid by clicking them. However, there's a twist: when you click a tile, the tiles adjacent to it are also toggled!
+The point of the game is to turn off all the lit tiles in a 5x5 grid by clicking them. However, there's a twist: when you click a tile, the tiles adjacent to it are also toggled!
 
 Try if you want.
 
@@ -13,7 +13,9 @@ My version of the app has a solver built in. Press `s` to auto-solve the current
 ## User Controls:
 
 `s` - Activate the solver
+
 `r` - refresh, and create a new puzzle
+
 `h` - Open the help panel
 
 ## Strategy:
@@ -36,6 +38,7 @@ How will we know which tiles to click? Well, we consule the following table:
 **Note:** The tiles are labeled from 1 to 5, 1 is the left, 5 is the right.
 
 | Tiles lit in bottom row | Tiles to click in top row |
+| --- | --- |
 | 1, 3, & 4 | 5 |
 | 3, 4, & 5 | 2 & 3 |
 | 1 & 5 | 1 & 2 |
