@@ -45,7 +45,7 @@ How will we know which tiles to click? Well, we consule the following table:
 | 1, 2, 4, & 5 | 3 |
 | 2, 3, & 5 | 1 |
 | 1, 2, & 3 | 4 & 5 |
-| 2 & 4 | | 1, 2, & 3 |
+| 2 & 4 | 1, 2, & 3 |
 
 Following the table above correctly and 'cascading' down will result in a solved grid.
 
