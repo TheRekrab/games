@@ -16,15 +16,17 @@ function updateBoard() {
 
 			let currentSpot = b.board[r][c];
 			if (currentSpot === 1) {
+				currentBox.classList.add("box-light");
+				currentBox.style.background = `rgba(255,255,255,${Math.random() * 0.3 + 0.7})`; // Assign a random value to the color value so that is it actually a little different each time. However, don't change it more than once.
 				if (currentBox.classList.contains("box-dark")) {
 					currentBox.classList.remove("box-dark");
 				}
-				currentBox.classList.add("box-light");
 			} else {
+				currentBox.classList.add("box-dark");
+				currentBox.style.background = 'inherit';
 				if (currentBox.classList.contains("box-light")) {
 					currentBox.classList.remove("box-light");
 				}
-				currentBox.classList.add("box-dark");
 			}
 		}
 	}
