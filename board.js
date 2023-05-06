@@ -97,8 +97,6 @@ class Board {
 				this.firstRowClicked[r] = 1;
 				this.toggle(r, 0);
 				return;
-			} else {
-				this.firstRowClicked[r] = 0;
 			}
 		}
 
